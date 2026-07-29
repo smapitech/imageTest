@@ -1,0 +1,121 @@
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef6f5;
+      text-align: center;
+      padding: 30px;
+      color: #1f2937;
+    }
+
+    h1 {
+      color: #0f766e;
+    }
+
+    .card {
+      background-color: white;
+      max-width: 700px;
+      margin: 25px auto;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      margin: 15px;
+      border-radius: 14px;
+    }
+
+    .border-image {
+      border: 6px solid #f97316;
+    }
+
+    button {
+      background-color: #0f766e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 8px;
+      border-radius: 9px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #115e59;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Image Practice for Kids</h1>
+
+  <p>Today we are learning how to add images to a webpage.</p>
+
+  <section class="card">
+    <h2>1. Image From the Images Folder</h2>
+
+    <p>This image is loaded from my project folder.</p>
+
+    <img src="images/cat.jpg" alt="A cat" width="250">
+  </section>
+
+  <section class="card">
+    <h2>2. Another Local Image</h2>
+
+    <p>This image is also inside the images folder.</p>
+
+    <img class="border-image" src="images/dog.jpg" alt="A dog" width="250">
+  </section>
+
+  <section class="card">
+    <h2>3. Image From the Internet</h2>
+
+    <p>This image is loaded using an online image link.</p>
+
+    <img
+      src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131"
+      alt="A cat from the internet"
+      width="250"
+    >
+  </section>
+
+  <section class="card">
+    <h2>4. Change Image With JavaScript</h2>
+
+    <p>Click the buttons to change the image.</p>
+
+    <img id="animalImage" src="images/cat.jpg" alt="Animal image" width="250">
+
+    <br>
+
+    <button onclick="showCat()">Show Cat</button>
+    <button onclick="showDog()">Show Dog</button>
+    <button onclick="showFox()">Show Fox</button>
+    <button onclick="showOnlineImage()">Show Online Image</button>
+  </section>
+
+  <script>
+    function showCat() {
+      document.getElementById("catImage").src = "images/cat.jpg";
+    }
+
+    function showDog() {
+      document.getElementById("dogImage").src = "images/dog.jpg";
+    }
+
+    function showFox() {
+      document.getElementById("foxImage").src = "images/fox.jpg";
+    }
+
+    function showOnlineImage() {
+      document.getElementById("animalImage").src =
+        "https://images.unsplash.com/photo-1518791841217-8f162f1e1131";
+    }
+  </script>
+
+</body>
+</html>
+
+
+
